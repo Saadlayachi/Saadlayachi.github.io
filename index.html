@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layachi Saad's Personal Website</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFD700;
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #FFD700;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .active {
+            display: block;
+        }
+        .work-item, .service-item {
+            margin-bottom: 20px;
+        }
+        .work-item img, .service-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .work-item img:hover, .service-item img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #FFD700;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Layachi Saad</h1>
+        <p>Apprenti Ingénieur - Île-de-France, Vernon</p>
+    </header>
+    <nav>
+        <a onclick="showSection('about')">About Me</a>
+        <a onclick="showSection('recent-work')">Recent Work</a>
+        <a onclick="showSection('services')">Services</a>
+    </nav>
+    <main>
+        <section id="about" class="section active">
+            <h2>About Me</h2>
+            <img src="https://via.placeholder.com/800x400.png?text=Profile+Photo" alt="Profile Photo">
+            <p>Hi, I'm Layachi Saad, an apprentice engineer based in Vernon, Île-de-France.</p>
+            <p>You can find me on:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/your-instagram-profile" target="_blank">Instagram</a></li>
+            </ul>
+            <p>Feel free to contact me at: <a href="tel:+123456789">+123456789</a></p>
+        </section>
+        <section id="recent-work" class="section">
+            <h2>Recent Work</h2>
+            <div class="work-item">
+                <h3>Project Title 1</h3>
+                <p>Description of the project.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Project+1" alt="Project 1">
+            </div>
+            <div class="work-item">
+                <h3>Project Title 2</h3>
+                <p>Description of the project.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Project+2" alt="Project 2">
+            </div>
+            <div class="work-item">
+                <h3>Project Title 3</h3>
+                <p>Description of the project.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Project+3" alt="Project 3">
+            </div>
+        </section>
+        <section id="services" class="section">
+            <h2>Services</h2>
+            <div class="service-item">
+                <h3>Consulting</h3>
+                <p>Providing expert advice and solutions in engineering and technology.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Consulting" alt="Consulting">
+            </div>
+            <div class="service-item">
+                <h3>Freelancer</h3>
+                <p>Available for freelance projects in web development and product design.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Freelancer" alt="Freelancer">
+            </div>
+            <div class="service-item">
+                <h3>Website Creation</h3>
+                <p>Creating modern, responsive websites for businesses and individuals.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Website+Creation" alt="Website Creation">
+            </div>
+            <div class="service-item">
+                <h3>Product Design</h3>
+                <p>Designing innovative products from concept to completion.</p>
+                <img src="https://via.placeholder.com/800x400.png?text=Product+Design" alt="Product Design">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Layachi Saad</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
